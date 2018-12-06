@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.khan.awais.foodrz.HomeActivity">
+
+        <ImageView
+            android:id="@+id/loginImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/background_for_login"/>
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_below="@+id/loginImage">
+
+        <TextView
+            android:id="@+id/textAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:textColor="@color/textColor"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_below="@+id/loginImage"/>
+
+        <TextView
+            android:id="@+id/textBetterDeals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login For Better Deals"
+            android:layout_below="@id/textAccount"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnFbLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_facebook"
+            android:padding="10dp"
+            android:layout_below="@+id/textBetterDeals"/>
+
+        <TextView
+            android:id="@+id/textSeperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="........  or  ........"
+            android:textSize="20sp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_gravity="center"
+            android:layout_below="@+id/btnFbLogin"/>
+
+        <Button
+            android:id="@+id/btnGoogleLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_google"
+            android:padding="10dp"
+            android:layout_below="@+id/textSeperator"/>
+    </LinearLayout>
+
+    <!--<android.support.v7.widget.Toolbar
+        android:id="@+id/homeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.Toolbar>-->
+
+    <RelativeLayout
+        android:id="@+id/homeBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/bottomIconsLeftLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/featuredButton">
+
+            <ImageView
+                android:id="@+id/imageNearMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nearme_btton"
+                android:padding="10dp"
+                android:layout_marginStart="16dp"/>
+
+            <ImageView
+                android:id="@+id/imageSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_ic"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/imageNearMe"/>
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/featuredButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circular_button"
+            android:elevation="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_foodr">
+        </ImageButton>
+
+        <RelativeLayout
+            android:id="@+id/bottomIconsRightLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/featuredButton">
+
+            <ImageView
+                android:id="@+id/imageForYou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_foryou"
+                android:padding="10dp"
+                android:layout_marginStart="16dp"/>
+
+            <ImageView
+                android:id="@+id/imageAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_ic"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/imageForYou"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
